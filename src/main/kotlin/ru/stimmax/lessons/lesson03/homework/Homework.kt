@@ -25,14 +25,22 @@ const val hackathonDuration: Int = 2
 private var supplierContactsAndAgreements: String = "agreements"
 
 // 8. Текущее состояние хакатона (статус) (публичная переменная, изменяется со временем)
-public var hackathonStatus: String
-    public get() = "прием заявок"
-    private set(value) = TODO()
+var hackathonStatus: String = "прием заявок"
+    get() {
+        return field
+    }
+    private set(value) {
+        field = value
+    }
 
 // 9. Список спонсоров (публичная переменная, доступна всем, изменяется со временем)
-public var sponsorsList: String
-    public get() = "список"
-    private set(value) = TODO()
+public var sponsorsList: String = "список спонсоров"
+    get() {
+        return field
+    }
+    private set(value) {
+        field = value
+    }
 
 // 10. Бюджет мероприятия (приватная переменная, постоянная, определена изначально)
 private val eventBudget: Double = 1.5
@@ -62,11 +70,13 @@ var evacuationPlan: String = "план для эвакуации"
 val availableEquipment: String = "доступное оборудование"
 
 // 17. Список свободного оборудования (всё, что можно взять прямо сейчас и что не занято другими участниками)
-var freeEquipmentList: String
+var freeEquipmentList: String = "all"
     get() {
-        TODO()
+        return field
     }
-    set(value) {}
+    set(value) {
+        field = value
+    }
 
 // 18. График питания участников (зависит от поставщика питания, определяемого за неделю до начала) (публичная изменяемая переменная с отложенной инициализацией, так как на момент создания поставщик и график не известны)
 lateinit var mealSchedule: String
@@ -87,11 +97,13 @@ val participantAndAudienceFeedback: String by lazy {
 }
 
 // 23. Текущая температура в помещении (публичная переменная, доступна всем, будет определена в момент старта)
-var roomTemperature: Double
+var roomTemperature: Double = 0.0
     get() {
-        TODO()
+        return field
     }
-    set(value) {}
+    private set(value) {
+        field = value
+    }
 
 // 24. Данные мониторинга и анализ производительности сетевого оборудования
 // и интернет-соединения для целей отладки своих приложений командами
@@ -99,9 +111,13 @@ var networkPerformanceMonitoringData: String = "data"
 
 // 25. Регулятор скорости интернета (понижающий коэффициент, например 0.5)
 // (публичная переменная, может изменяться, конечное значение будет определено в момент старта мероприятия)
-var internetSpeedLimiter: Double
-    get() = 0.0
-    set(value) = TODO()
+var internetSpeedLimiter: Double = 0.0
+    get() {
+        return field
+    }
+    private set(value) {
+        field = value
+    }
 
 // 26. Уровень освещения (публичная переменная, может меняться в зависимости от внешних условий)
 lateinit var lightLevel: String
