@@ -1,4 +1,4 @@
-package ru.stimmax.ru.stimmax.lessons.lesson5.homework
+package ru.stimmax.ru.stimmax.lessons.lesson05.homework
 
 fun main() {
 
