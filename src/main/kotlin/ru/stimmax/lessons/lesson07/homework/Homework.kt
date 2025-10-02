@@ -123,27 +123,27 @@ fun multiplicationTable() {
 fun sumNumbers(arg:Int) {
     var sum = 0
     for (i in 1..arg) {
-        sum+=i
+        sum += i
     }
     println(sum)
 }
 
 //Напишите функцию, которая вычисляет факториал числа 'arg' с использованием цикла while.
-fun factorial(arg:Int) {
+fun factorial(arg: Int) {
     var counter = 1
     var factorialValue = 1
     while (counter++ < arg) {
-        factorialValue*=counter
+        factorialValue *= counter
     }
     println(factorialValue)
 }
 
 //Напишите функцию, которая находит сумму всех четных чисел от 2 до 'arg', используя цикл while.
-fun sumOdd(arg:Int) {
+fun sumOdd(arg: Int) {
     var counter = 1
     var sum = 0
-    while(counter++ < arg) {
-        if (counter % 2 == 0) sum+= counter
+    while (counter++ < arg) {
+        if (counter % 2 == 0) sum += counter
     }
     println(sum)
 }
@@ -152,8 +152,8 @@ fun sumOdd(arg:Int) {
 fun stars() {
     var rows = 0
     var columns = 0
-    while(rows++ < 3) {
-        while(columns++ < 5) {
+    while (rows++ < 3) {
+        while (columns++ < 5) {
             print('*')
         }
         columns = 0
@@ -167,7 +167,7 @@ fun sumOddAndEven(arg: Int) {
     var sumEven = 0
     for (i in 1..arg) {
         if (i % 2 == 0) sumOdd += i
-        else sumEven+=i
+        else sumEven += i
     }
     println("Sum of odd numbers is $sumOdd, sum of even numbers is $sumEven")
 }
