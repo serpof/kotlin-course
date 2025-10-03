@@ -11,7 +11,7 @@ fun main() {
 fun allWordsFromUpperCase(arg: String): String {
     var allUpperWords = ""
     for (word in arg.split(" ")) {
-        allUpperWords +=  word[0].uppercase() + word.substring(1) + " "
+        allUpperWords +=  word[0].uppercase() + word.substring(1).lowercase() + " "
     }
 
     return allUpperWords.trim()
