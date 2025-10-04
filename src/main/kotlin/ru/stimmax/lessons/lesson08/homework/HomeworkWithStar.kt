@@ -1,9 +1,5 @@
 package ru.stimmax.ru.stimmax.lessons.lesson08.homework
 
-fun main() {
-    multiplicationTable2(3, 40)
-}
-
 //7. Все слова с большой буквы.
 //Напишите метод, который преобразует строку из нескольких слов в строку, где каждое слово начинается с заглавной буквы,
 // а все остальные - строчные. Используй перебор, анализ символов и замену букв на заглавную с помощью метода
@@ -11,7 +7,7 @@ fun main() {
 fun allWordsFromUpperCase(arg: String): String {
     var allUpperWords = ""
     for (word in arg.split(" ")) {
-        allUpperWords +=  word[0].uppercase() + word.substring(1).lowercase() + " "
+        allUpperWords += word[0].uppercase() + word.substring(1).lowercase() + " "
     }
 
     return allUpperWords.trim()
