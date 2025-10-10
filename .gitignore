@@ -6,6 +6,9 @@ build/
 
 ### IntelliJ IDEA ###
 .idea
+.idea/gradle.xml
+.idea/kotlinc.xml
+.idea/dictionaries/project.xml
 *.iws
 *.iml
 *.ipr
