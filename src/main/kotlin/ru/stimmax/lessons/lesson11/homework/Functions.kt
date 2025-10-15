@@ -34,8 +34,8 @@ fun getNullableNum(): Double? {
 }
 
 // 7. Принимает nullable список целых чисел, не возвращает значения и доступна только в текущем файле.
-private fun getList(list: List<Int?>) {
-    val size = list.size
+private fun getList(list: List<Int>?) {
+    val size = list?.size
 }
 
 // 8. Принимает целое число и возвращает nullable строку.
