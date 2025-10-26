@@ -4,7 +4,10 @@ class Concert(val groupName: String,
               var location: String,
               val price: Double,
               var capacity: Int,
-              private var soldTickets: Int) {
+              ) {
+
+    private var soldTickets: Int = 0
+
     fun info() {
         println(
             "Welcome! The band ${this.groupName} has arrived! " +
