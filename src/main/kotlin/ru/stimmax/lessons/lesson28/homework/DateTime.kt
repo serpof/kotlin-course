@@ -75,9 +75,6 @@ fun formatTemporalIso(t: Temporal): String = when (t) {
     is OffsetDateTime -> DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(t)
     is ZonedDateTime -> DateTimeFormatter.ISO_ZONED_DATE_TIME.format(t)
     is Instant -> DateTimeFormatter.ISO_INSTANT.format(t)
-    is Year -> DateTimeFormatter.ISO_YEAR.format(t)
-    is YearMonth -> DateTimeFormatter.ISO_YEAR_MONTH.format(t)
-    is MonthDay -> DateTimeFormatter.ISO_MONTH_DAY.format(t)
     else -> t.toString()
 }
 
@@ -112,7 +109,7 @@ fun main() {
         Year.of(2025),
         YearMonth.of(2025, 12),
         MonthDay.of(2, 25),
-    ).forEach { println("${it::class.simpleName}: ${formatTemporalCustom(it)}") }
+    ).forEach { println("${it::class.simpleName}: ${formatTemporalCustom(it as Temporal)}") }
 
     println("ISO formatting:")
     listOf(
@@ -128,7 +125,7 @@ fun main() {
         Year.of(2025),
         YearMonth.of(2025, 12),
         MonthDay.of(2, 25),
-    ).forEach { println("${it::class.simpleName}: ${formatTemporalIso(it)}") }
+    ).forEach { println("${it::class.simpleName}: ${formatTemporalIso(it as Temporal)}") }
 
     // 5 Создай объекты дат и / или времени которые мы изучили и по очереди передай их в метод созданный выше.
     // Не используй в них метод now()
